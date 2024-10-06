@@ -2,27 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flatiron Task Lister</title>
+  <title> To do list </title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div id="main-content">
-    <h1>Task Lister Lite™️</h1>
+    <h1>Task Organizer™️</h1>
 
     <form id="create-task-form" action="" method="POST">
+      
       <label for="new-task-description">Task description:</label>
-      <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
-      <input type="submit" value="Create New Task">
+      <input type="text" id="new-task-description" name="new-task-description" placeholder="Input Task" required>
+
+      <label for="Due date">Due date</label>
+      <input type="date" id="due-date" name="due-date"> 
+
+      <label for="priority">Priority Level</label>
+      <select name="priority" id="priority">
+        <option value="None"></option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <input type="submit" id="submit" value="Create New Task">
     </form>
 
     <div id="list">
-      <h2>My Todos:</h2>
-      <ul id="tasks">
-      </ul>
+      <h2>Today's Adventures</h2>
+      <ol id="tasks">
+      </ol>
     </div>
+
+    <button id="sort-asc">Sort Ascending</button>
+    <!-- <button id="sort-desc">Sort Descending</button> -->
 
     <script src="./src/index.js"></script>
   </div>
 
 </body>
 </html>
+
+
